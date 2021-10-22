@@ -147,7 +147,7 @@ body {
                 }
                 &--title {
                     padding-top: 25px;
-                    padding-bottom: 50px;
+                    padding-bottom: 30px;
                     font-size: 24px;
                     color: #535353;
                     font-weight: 700;
@@ -155,13 +155,31 @@ body {
                 input {
                       width: 340px;  
                       height: 40px;
+                      padding-left: 10px;
                       border: 1px #c3c3c3 solid;
-
-                      margin-bottom: 35px;
+                      margin-bottom: 15px;
+                      outline: none;
+                      &::placeholder {
+                          opacity: 0;
+                          transition: 0.1s ease;
+                      }
+                      &:focus {
+                          border: 1px #ff8383 solid;
+                          box-shadow: inset 0px 0px 5px 6px #EFC2CA;
+                          &::placeholder {
+                              color: #dc7f7f;
+                              opacity: 1;
+                              transition: 0.1s ease;
+                          }
+                          
+                      }
                 }
                 textarea {
+                    padding-top: 10px;
+                    padding-left: 10px;
                     width: 340px; 
                     border: 1px #c3c3c3 solid;
+                    outline: none;
                 }
                 button {
                     position: relative;
@@ -190,6 +208,27 @@ body {
                 @include br(xs){
                     left: 190px;
                 }
+            }
+            .name {
+                padding-top: 0px;
+                padding-bottom: 7px;
+                color: #535353;
+                font-size: 14px;
+            }
+            .tel {
+                padding-bottom: 7px;
+                color: #535353;
+                font-size: 14px;
+            }
+            .email {
+                padding-bottom: 7px;
+                color: #535353;
+                font-size: 14px;
+            }
+            .message {
+                padding-bottom: 7px;
+                color: #535353;
+                font-size: 14px;
             }
             
         }
