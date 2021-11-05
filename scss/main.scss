@@ -58,6 +58,7 @@ body {
             padding: 0 0px;
             box-sizing: border-box;
             margin: 0 auto;
+            overflow-x: hidden;
         }
         
 }
@@ -118,7 +119,7 @@ body {
             left:50%;
             transform:translate(-50%, -50%);    
             @include br(xs){
-                transform:translate(-41%, -50%);  
+                transform:translate(-50%, -50%);  
             }
             &-window {
                 display: flex;
