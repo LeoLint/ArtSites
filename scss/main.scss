@@ -118,7 +118,7 @@ body {
             left:50%;
             transform:translate(-50%, -50%);    
             @include br(xs){
-                left: 60%;
+                transform:translate(-41%, -50%);  
             }
             &-window {
                 display: flex;
