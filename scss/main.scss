@@ -568,7 +568,7 @@ body {
 }
 
 .footer {
-    max-width: 1440px;
+    width: 100%;
     background-color: #777777;
     @include br(xs){
         width: 480px;
