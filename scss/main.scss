@@ -26,7 +26,6 @@ body {
     width: 100%;
     box-sizing: border-box;
     font-family: 'PT Sans', sans-serif;
-    overflow-x: hidden;
 }
 
 
@@ -36,25 +35,22 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     @include br(lg){
-            min-width: 900px;
-            padding: 0 15px;
+            max-width: 900px;
             box-sizing: border-box;
             margin: 0 auto;
         }
     @include br(md){
-            min-width: 800px;
-            padding: 0 15px;
+            max-width: 800px;
             box-sizing: border-box;
             margin: 0 auto;
         }
     @include br(sm){
-            min-width: 768px;
-            padding: 0 15px;
+            max-width: 768px;
             box-sizing: border-box;
             margin: 0 auto;
         }
     @include br(xs){
-            min-width: 480px;
+            max-width: 480px;
             padding: 0 0px;
             box-sizing: border-box;
             margin: 0 auto;
@@ -275,9 +271,6 @@ body {
 }
 
 .main {
-    @include br(xs){
-        width: 480px;
-    }
     .slider {
         width: 100%;
         margin: 0 auto;
@@ -338,9 +331,6 @@ body {
 
 .catalog {
     width: 100%;
-    @include br(xs){
-        width: 480px;
-    }
     &_wrapper {
         display: flex;
         @include br(sm){
@@ -496,8 +486,8 @@ body {
 
     
     .numbers {
-        width: 25%;
-        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
         padding-top: 30px;
         padding-bottom: 65px;
         &_wrapper {
@@ -508,6 +498,8 @@ body {
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
+                margin-left: 10px;
+                margin-right: 10px;
                 color: #767676;
                 font-size: 14px;
                 transition: 0.1s ease;
@@ -523,10 +515,8 @@ body {
 }
 
 .description {
-    width: 100%;
     padding-bottom: 200px;
     @include br(xs){
-        width: 480px;
         padding: 0px 0px 40px 0px;
     }
     &_wrapper {
@@ -536,8 +526,9 @@ body {
         line-height: 22px;
         font-size: 14px;
         color: #767676;
-        @include br(xs){
-            width: 100%;
+        @include br(sm){
+            justify-content: center;
+            align-items: center;
         }
         &-content {
             padding-top: 34px;
@@ -545,8 +536,8 @@ body {
             display: flex;
             flex-wrap: wrap;
             @include br(md){
-                justify-content: center;
-                align-items: center;
+                width: 400px;
+                padding-right: 0px;
             }
             @include br(sm){
                 justify-content: center;
@@ -580,9 +571,6 @@ body {
 .footer {
     width: 100%;
     background-color: #777777;
-    @include br(xs){
-        width: 480px;
-    }
     &_wrapper {
         width: 100%;
         padding-top: 44px;
