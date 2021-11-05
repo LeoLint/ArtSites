@@ -1,6 +1,7 @@
 @mixin br($br) {
     @if $br == xs {
       @media (max-width: 480px) { @content; }
+      
     }
     @if $br == sm {
       @media (max-width: 768px) { @content; }
@@ -35,29 +36,30 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     @include br(lg){
-            width: 900px;
+            min-width: 900px;
             padding: 0 15px;
             box-sizing: border-box;
             margin: 0 auto;
         }
     @include br(md){
-            width: 800px;
+            min-width: 800px;
             padding: 0 15px;
             box-sizing: border-box;
             margin: 0 auto;
         }
     @include br(sm){
-            width: 768px;
+            min-width: 768px;
             padding: 0 15px;
             box-sizing: border-box;
             margin: 0 auto;
         }
     @include br(xs){
-            width: 400px;
+            min-width: 480px;
             padding: 0 0px;
             box-sizing: border-box;
             margin: 0 auto;
         }
+        
 }
 
 
@@ -70,22 +72,14 @@ body {
     &_wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         @include br(md){
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-        @include br(sm){
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
         }
         &-logo {
             padding-top: 65px;
             padding-bottom: 65px;
-            @include br(sm){
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
         }
         &--feedback {
             padding-top: 45px;
@@ -93,10 +87,6 @@ body {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            @include br(sm){
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
             p {
                 font-size: 40px;
                 font-weight: 400;
@@ -126,15 +116,8 @@ body {
             z-index: 10;
             top:20%;
             left:37.5%; 
-            @include br(lg){
-                left: 25%;
-            }
-            @include br(sm){
-                left: 20%;
-            }
             @include br(xs){
-                left: 40px;
-                border: 1px  #c3c3c3 solid ;
+                left: 10%;
             }
             &-window {
                 display: flex;
@@ -144,6 +127,7 @@ body {
                 width: 466px;
                 @include br(xs){
                     width: 400px;
+
                 }
                 &--title {
                     padding-top: 25px;
@@ -182,7 +166,6 @@ body {
                     outline: none;
                 }
                 button {
-                    position: relative;
                     display: block;
                     width: 128px;
                     margin-top: 20px;
@@ -198,15 +181,15 @@ body {
                 
             }
             .close-button {
-                display: block;
+                display: flex;
+                padding-bottom: 10px;
+                padding-left: 460px;
                 width: 40px;
                 cursor: pointer;
                 height: 40px;
-                left: 470px;
-                top: -30px;
-                position: absolute;
                 @include br(xs){
-                    left: 190px;
+                    padding-bottom: 20px;
+                    padding-left: 380px;
                 }
             }
             .name {
@@ -237,8 +220,8 @@ body {
 .menu {
     width: 100%;
     background-color: #777777;
-    @include br(xs){
-        width: 480px;
+    @include br(md){
+        display: none;
     }
     &_links {
         display: flex;
@@ -254,12 +237,6 @@ body {
             cursor: pointer;
             color: white;
             transition: 0.3s ease;
-            @include br(sm){
-                display: none;
-            }
-            @include br(md){
-                font-size: 22px;
-            }
             p {
                 border-bottom: 2px transparent solid;
                 &:hover {
@@ -277,18 +254,6 @@ body {
         display: none;
         justify-content: center;
         padding-bottom: 40px;
-        @include br(lg){
-            display: none;
-        }
-        @include br(md){
-            display: none;
-        }
-        @include br(sm){
-            display: flex;
-        }
-        @include br(xs){
-            display: flex;
-        }
         li {
             color: #dcdcdc;
             margin-bottom: 5px;
@@ -324,37 +289,42 @@ body {
             }
             
         }
-        .slick-prev,.slick-prev:hover,.slick-prev:focus {
+        .slick-prev{
             z-index: 1;
             left: 180px;
             width: 100px;
             height: 100px;
+            opacity: 1;
             transform: translate(0, -50%);
             background: url(/img/leftArrow.png) no-repeat;
-            @include br(sm){
-                z-index: 0;
-                opacity: 0;
+            @include br(md){
+                left: -100%;
             }
-            @include br(lg){
-                z-index: 0;
-                opacity: 0;
+            @include br(sm){
+                left: -100%;
+            }
+            @include br(xs){
+                left: -100%;
             }
 
           }
           .slick-next {
+            z-index: 1;
             right: 160px;
             width: 100px;
             height: 100px;
+            opacity: 1;
             background: url(/img/rightArrow.png) no-repeat;
+            @include br(md){
+                right: -100%;
+            }
             @include br(sm){
-                z-index: 0;
-                opacity: 0;
+                right: -100%;
             }
-            @include br(lg){
-                z-index: 0;
-                opacity: 0;
+            @include br(xs){
+                right: -100%;
             }
-
+            
           }
     }
 
@@ -371,9 +341,7 @@ body {
     }
     &_wrapper {
         display: flex;
-        @include br(xs){
-            justify-content: center;
-            flex-wrap: wrap;
+        @include br(sm){
             flex-direction: column;
             align-items: center;
         }
@@ -384,10 +352,6 @@ body {
                 align-items: baseline;
                 padding-top: 100px;
                 margin: 0 auto;
-                @include br(xs){
-                    padding-left: 25px;
-                    padding-bottom: 25px;
-                }
                 &-img {
                     padding-left: 30px;
                 }
@@ -403,9 +367,9 @@ body {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: flex-start;
-            @include br(xs){
-                flex-direction: column;
-            }
+            @include br(sm){
+            justify-content: center;
+        }
             &--item {
                 display: flex;
                 flex-direction: column;
@@ -416,10 +380,6 @@ body {
                 background-color: #dcdcdc ;
                 padding-bottom: 15px;
                 margin-bottom: 20px;
-                @include br(sm){
-                    width: 215px;
-                    margin-right: 0px;
-                }
                 .img {
                     margin: 0 auto;
                 }
@@ -554,6 +514,7 @@ body {
     padding-bottom: 200px;
     @include br(xs){
         width: 480px;
+        padding: 0px 0px 40px 0px;
     }
     &_wrapper {
         right: 0px;
@@ -562,58 +523,52 @@ body {
         line-height: 22px;
         font-size: 14px;
         color: #767676;
-        @include br(sm){
-            justify-content: center;
-        }
         @include br(xs){
-            align-items: center;
+            width: 100%;
         }
         &-content {
             padding-top: 34px;
             border-top: 2px #767676 solid;
             display: flex;
             flex-wrap: wrap;
-            @include br(lg){
+            @include br(md){
                 justify-content: center;
+                align-items: center;
+            }
+            @include br(sm){
+                justify-content: center;
+                align-items: center;
             }
             @include br(xs){
-                flex-direction: column;
+                width: 440px;
             }
         }
         .left {
             width: 375px;
             padding-right: 20px;
             margin-bottom: 25px;
-            @include br(lg){
-                width: 500px;
+            @include br(md){
                 padding-right: 0px;
             }
-            @include br(sm){
-                width: 280px;
-            }
             @include br(xs){
-                width: 220px; 
+                padding-right: 0px;
             }
         }
         .right {
             width: 375px;
             padding-left: 20px;
-            @include br(lg){
-                width: 500px;
+            @include br(md){
                 padding-left: 0px;
             }
-            @include br(sm){
-                width: 280px;
-            }
             @include br(xs){
-                width: 220px; 
+                padding-left: 0px;
             }
         }
     }
 }
 
 .footer {
-    width: 100%;
+    max-width: 1440px;
     background-color: #777777;
     @include br(xs){
         width: 480px;
@@ -625,21 +580,21 @@ body {
         display: flex;
         justify-content: space-between;
         color: white;
-        @include br(xs){
-            align-items: baseline;
-            padding-left: 40px;
-        }
         @include br(sm){
             flex-direction: column-reverse;
-           flex-direction: column;
-        }
-        @include br(md){
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
         }
         .left {
             font-size: 14px;
+            @include br(sm){
+                padding-top: 20px;
+            }
         }
         .central {
+            @include br(sm){
+                padding-bottom: 20px;
+            }
             ul {
                 list-style-type: none;
                 a {
@@ -651,18 +606,12 @@ body {
                     border-bottom: 1px white solid;
                 }
             }
-            @include br(sm){
-                padding-top: 30px;
-                padding-bottom: 30px;
-             }
-            @include br(xs){
-                padding-top: 10px;
-                padding-bottom: 10px;
-                
-            }
         }
         .right {
             display: flex;
+            @include br(sm){
+                padding-bottom: 20px;
+            }
             .company_name {
                 font-size: 14px;
                 padding-left: 10px;
