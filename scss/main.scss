@@ -114,8 +114,9 @@ body {
             display: none;;
             position: absolute;
             z-index: 10;
-            top:20%;
-            left:37.5%; 
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);    
             @include br(xs){
                 left: 10%;
             }
@@ -296,7 +297,7 @@ body {
             height: 100px;
             opacity: 1;
             transform: translate(0, -50%);
-            background: url(../img/leftArrow.png) no-repeat;
+            background: url(./img/leftArrow.png) no-repeat;
             @include br(md){
                 left: -100%;
             }
@@ -314,7 +315,7 @@ body {
             width: 100px;
             height: 100px;
             opacity: 1;
-            background: url(../img/rightArrow.png) no-repeat;
+            background: url(./img/rightArrow.png) no-repeat;
             @include br(md){
                 right: -100%;
             }
