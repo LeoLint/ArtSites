@@ -118,7 +118,7 @@ body {
             left:50%;
             transform:translate(-50%, -50%);    
             @include br(xs){
-                left: 10%;
+                left: 60%;
             }
             &-window {
                 display: flex;
@@ -353,8 +353,16 @@ body {
                 align-items: baseline;
                 padding-top: 100px;
                 margin: 0 auto;
+                padding-bottom: 20px;
+                @include br(xs){
+                    flex-direction: column;
+                    align-items: center;
+                }
                 &-img {
-                    padding-left: 30px;
+                   padding-left: 25px;
+                   @include br(xs){
+                    padding: 0px;
+                }
                 }
                 &-title {
                     font-size: 30px;
@@ -414,6 +422,9 @@ body {
         justify-content: flex-start;
         padding-top: 10px;
         padding-bottom: 20px;
+        @include br(xs){
+            justify-content: center;
+        }
         button {
             padding-right: 2px;
             color: #767676;
@@ -539,9 +550,6 @@ body {
             @include br(sm){
                 justify-content: center;
                 align-items: center;
-            }
-            @include br(xs){
-                width: 440px;
             }
         }
         .left {
