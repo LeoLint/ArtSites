@@ -5,4 +5,10 @@ $( document ).ready(function() {
       $('.close-button').click(() => {
         $('.feedback_wrapper').removeClass('open');
       });
+      $('.mobile_menu-button').click(() => {
+        $('.mobile_menu-list').addClass('open_menu');
+      });
+      $('.close_button').click(() => {
+        $('.mobile_menu-list').removeClass('open_menu');
+      });
 });

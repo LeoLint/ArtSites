@@ -18,9 +18,26 @@
 <body>
     <header class="header">
         <div class="container">
+            <div class="mobile_menu">
+                <div class="mobile_menu-button">
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <menu class="mobile_menu-list">
+                        <li class="close_button">Close Menu</li>
+                        <li>Главная</li>
+                        <li>Каталог</li>
+                        <li>Доставка и оплата</li>
+                        <li>Прайс-лисt</li>
+                        <li>Контакты</li>
+                </menu>
+            </div>
             <div class="header_wrapper">
                 <div class="header_wrapper-logo">
-                    <img src="./img/logoName.png" alt="logoName">
+                    <img  src="./img/logoName.png" alt="logoName">
                 </div>
                 <div class="header_wrapper--feedback">
                     <p>+7(499) 777-77-77</p>
@@ -43,7 +60,7 @@
             <p class="email">Email *</p>
             <input placeholder="Поле обязательно для заполнения" type="email">
             <p class="message">Сообщение</p>
-            <textarea name="Сообщение"id="" cols="30" rows="10"></textarea>
+            <textarea name="Сообщение" cols="30" rows="10"></textarea>
             <button class="feedback_wrapper-window-button">Отправить</button>
         </div>
     </div>
@@ -66,41 +83,22 @@
                     <p>Контакты</p>
                 </li>
             </ul>
-            <div class="mobile_menu">
-                <ul class="mobile_menu_links">
-                    <li>
-                        <p>Главная</p>
-                    </li>
-                    <li>
-                        <p>Каталог</p>
-                    </li>
-                    <li>
-                        <p>Доставка и оплата</p>
-                    </li>
-                    <li>
-                        <p>Прайс-лист</p>
-                    </li>
-                    <li>
-                        <p>Контакты</p>
-                    </li>
-                </ul> 
-            </div>
         </div>
     </section>
 
     <section class="main">
         <div class="slider">
             <div class="slider_item">
-                <img src="./img/sliderItemOne.png" alt="sliderItemOne">
+                <img class="slider_item-img" src="./img/sliderItemOne.png" alt="sliderItemOne">
             </div>
             <div class="slider_item">
-                <img src="./img/sliderItemTwo.png" alt="sliderItemTwo">
+                <img class="slider_item-img" src="./img/sliderItemTwo.png" alt="sliderItemTwo">
             </div>
             <div class="slider_item">
-                <img src="./img/sliderItemOne.png" alt="sliderItemOne">
+                <img class="slider_item-img" src="./img/sliderItemOne.png" alt="sliderItemOne">
             </div>
             <div class="slider_item">
-                <img src="./img/sliderItemTwo.png" alt="sliderItemTwo">
+                <img class="slider_item-img" src="./img/sliderItemTwo.png" alt="sliderItemTwo">
             </div>
         </div>
     </section>
@@ -117,60 +115,60 @@
             <div class="catalog_wrapper">
                 <div class="catalog_wrapper-left">
                     <div class="catalog_category">
-                        <button class="catalog_category-link">
-                            <p class="catalog_category-link--title">Автомобили</p>
+                        <div class="catalog_category-link">
+                            <div class="catalog_category-link--title">Автомобили</div>
                             <ul class="list">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
                             </ul>
-                        </button>
-                        <button class="catalog_category-link">
-                            <p class="catalog_category-link--title">Бытовая техника</p>
+                        </div>
+                        <div class="catalog_category-link">
+                            <div class="catalog_category-link--title">Бытовая техника</div>
                             <ul class="list">
                                 <li>Микроволновки</li>
                                 <li>Холодильники</li>
                                 <li>Посудомоечные машины</li>
                                 <li>Чайники</li>
                             </ul>
-                        </button>
-                        <button class="catalog_category-link">
-                            <p class="catalog_category-link--title">Мобильная техника</p>
+                        </div>
+                        <div class="catalog_category-link">
+                            <div class="catalog_category-link--title">Мобильная техника</div>
                             <ul class="list">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
                             </ul>
-                        </button>
-                        <button class="catalog_category-link">
-                            <p class="catalog_category-link--title">Компьютеры</p>
+                        </div>
+                        <div class="catalog_category-link">
+                            <div class="catalog_category-link--title">Компьютеры</div>
                             <ul class="list">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
                             </ul>
-                        </button>
-                        <button class="catalog_category-link">
-                            <p class="catalog_category-link--title">Одежда</p>
+                        </div>
+                        <div class="catalog_category-link">
+                            <div class="catalog_category-link--title">Одежда</div>
                             <ul class="list">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
                             </ul>
-                        </button>
-                        <button class="catalog_category-link">
-                            <p class="catalog_category-link--title">Недвижимость</p>
+                        </div>
+                        <div class="catalog_category-link">
+                            <div class="catalog_category-link--title">Недвижимость</div>
                             <ul class="list">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
+                                <li class="list_link">Lorem ipsum</li>
                             </ul>
-                        </button>
+                        </div>
                     </div>
                     <div class="priceList_logo">
                         <div class="priceList_logo-img">
